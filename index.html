@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriPremium - Thực Phẩm Dinh Dưỡng Cao Cấp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        // ================= CẤU HÌNH HỆ THỐNG ĐÃ ĐƯỢC CHUẨN HÓA KHỚP VỚI API CỦA BẠN =================
+        const MAC_DINH_NGAN_HANG = "BIDV";        
+        const MAC_DINH_STK       = "8896183144"; 
+        const MAC_DINH_TEN_CHU_TK= "PHUNG THANH NAM"; 
+        // ==========================================================================================
+    </script>
+    
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-emerald-600 flex items-center gap-2">
+                <i class="fa-solid fa-leaf"></i> NutriPremium
+            </a>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#" class="text-emerald-600 hover:text-emerald-700">Trang Chủ</a>
+                <a href="#san-pham" class="text-gray-600 hover:text-emerald-600">Sản Phẩm</a>
+                <a href="#huong-dan" class="text-gray-600 hover:text-emerald-600">Hướng Dẫn</a>
+            </nav>
+            <a href="#san-pham" class="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition font-semibold">
+                Mua Ngay
+            </a>
+        </div>
+    </header>
+
+    <section class="bg-gradient-to-r from-emerald-50 to-teal-50 py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center max-w-3xl">
+            <span class="bg-emerald-100 text-emerald-800 text-sm font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider">Sức Khỏe Vàng - Cuộc Sống Vàng</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mt-4 mb-6 leading-tight">
+                Nâng Tầm Sức Khỏe Với Thực Phẩm Dinh Dưỡng Cao Cấp
+            </h1>
+            <p class="text-lg text-gray-600 mb-8">
+                Chuyên cung cấp Sâm Ngọc Linh, Tổ Yến Sào tinh chế, Viên bổ não và các giải pháp chăm sóc sức khỏe chủ động chính hãng 100%.
+            </p>
+            <a href="#san-pham" class="inline-block bg-emerald-600 text-white text-lg font-bold px-8 py-3.5 rounded-lg shadow-lg hover:bg-emerald-700 transition transform hover:-translate-y-0.5">
+                Khám Phá Cửa Hàng <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="san-pham" class="container mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Danh Mục Sản Phẩm Bán Chạy</h2>
+            <p class="text-gray-500">Chọn sản phẩm bạn yêu thích và tiến hành đặt hàng</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition flex flex-col justify-between">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=600&q=80" alt="Hồng Sâm" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold uppercase text-amber-600 bg-amber-50 px-2.5 py-1 rounded">Bồi bổ cơ thể</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">Hồng Sâm Sáu Năm Tuổi Premium</h3>
+                        <p class="text-gray-600 text-sm">Tăng cường sức đề kháng, giảm căng thẳng mệt mỏi, bổ sung năng lượng bền bỉ cho cơ thể.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-2xl font-bold text-emerald-600">1.850.000 đ</span>
+                        <span class="text-sm text-gray-400 line-through">2.200.000 đ</span>
+                    </div>
+                    <button onclick="openOrderModal('Hong Sam Premium', 1850000)" class="w-full bg-emerald-600 text-white text-center py-2.5 rounded-lg font-semibold hover:bg-emerald-700 transition">
+                        <i class="fa-solid fa-cart-shopping mr-2"></i> Mua Ngay
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition flex flex-col justify-between">
+                <div>
+                    <img src="https://yensaothoan.com/media/mageplaza/blog/post/h/i/hinh-anh-to-yen-sao-diem-noi-bat.jpg" alt="Tổ Yến" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold uppercase text-blue-600 bg-blue-50 px-2.5 py-1 rounded">Trẻ hóa & Đề kháng</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">Tổ Yến Sào Tinh Chế Nguyên Chất</h3>
+                        <p class="text-gray-600 text-sm">Giàu axit amin và khoáng chất quý giá, giúp đẹp da, bổ phổi, hồi phục sức khỏe cho người ốm.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-2xl font-bold text-emerald-600">3.500.000 đ</span>
+                        <span class="text-sm text-gray-400 line-through">4.100.000 đ</span>
+                    </div>
+                    <button onclick="openOrderModal('To Yen Tinh Che', 3500000)" class="w-full bg-emerald-600 text-white text-center py-2.5 rounded-lg font-semibold hover:bg-emerald-700 transition">
+                        <i class="fa-solid fa-cart-shopping mr-2"></i> Mua Ngay
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition flex flex-col justify-between">
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwwHZoNfJ6nRM987VgNgLLBjdDlPd0S9kr8_1qDQiiZA&s=10" alt="Bổ não" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold uppercase text-purple-600 bg-purple-50 px-2.5 py-1 rounded">Trí não & Trí nhớ</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">Viên Uống Bổ Não Ginkgo Biloba Max</h3>
+                        <p class="text-gray-600 text-sm">Tăng cường tuần hoàn máu não, cải thiện tình trạng mất ngủ, giảm đau đầu và tăng độ tập trung.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-2xl font-bold text-emerald-600">450.000 đ</span>
+                        <span class="text-sm text-gray-400 line-through">600.000 đ</span>
+                    </div>
+                    <button onclick="openOrderModal('Bo Nao Ginkgo', 450000)" class="w-full bg-emerald-600 text-white text-center py-2.5 rounded-lg font-semibold hover:bg-emerald-700 transition">
+                        <i class="fa-solid fa-cart-shopping mr-2"></i> Mua Ngay
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition flex flex-col justify-between">
+                <div>
+                    <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/527/060/products/dong-trung-ha-thao-say-thang-hoa.jpg?v=1729936962257" alt="Đông trùng hạ thảo" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold uppercase text-orange-600 bg-orange-50 px-2.5 py-1 rounded">Sinh lực & Miễn dịch</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">Đông Trùng Hạ Thảo Sấy Thăng Hoa</h3>
+                        <p class="text-gray-600 text-sm">Hỗ trợ bảo vệ chức năng gan thận, ổn định huyết áp, làm chậm quá trình lão hóa tự nhiên.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-2xl font-bold text-emerald-600">950.000 đ</span>
+                        <span class="text-sm text-gray-400 line-through">1.200.000 đ</span>
+                    </div>
+                    <button onclick="openOrderModal('Dong Trung Ha Thao', 950000)" class="w-full bg-emerald-600 text-white text-center py-2.5 rounded-lg font-semibold hover:bg-emerald-700 transition">
+                        <i class="fa-solid fa-cart-shopping mr-2"></i> Mua Ngay
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition flex flex-col justify-between">
+                <div>
+                    <img src="https://sieuthilamdep.com/images/detailed/16/sua-ong-chua-costar-royal-jelly-1610mg-365-vien-26042022.jpeg" alt="Sữa ong chúa" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold uppercase text-yellow-600 bg-yellow-50 px-2.5 py-1 rounded">Nội tiết & Làn da</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">Tinh Chất Sữa Ong Chúa Úc 365</h3>
+                        <p class="text-gray-600 text-sm">Cân bằng nội tiết tố, hỗ trợ làm mờ thâm nám, đem lại làn da sáng mịn rạng ngời từ bên trong.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-2xl font-bold text-emerald-600">680.000 đ</span>
+                        <span class="text-sm text-gray-400 line-through">850.000 đ</span>
+                    </div>
+                    <button onclick="openOrderModal('Sua Ong Chua Uc', 680000)" class="w-full bg-emerald-600 text-white text-center py-2.5 rounded-lg font-semibold hover:bg-emerald-700 transition">
+                        <i class="fa-solid fa-cart-shopping mr-2"></i> Mua Ngay
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition flex flex-col justify-between">
+                <div>
+                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-81ztc-modvqwyko2rx18" alt="Nước Linh Chi" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold uppercase text-rose-600 bg-rose-50 px-2.5 py-1 rounded">Thải độc & Thanh lọc</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">Nước Ép Tinh Chất Linh Chi Thượng Hạng</h3>
+                        <p class="text-gray-600 text-sm">Hỗ trợ đào thải độc tố, mát gan, hạ mỡ máu và tối ưu hóa hệ thống tuần hoàn cơ thể.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-2xl font-bold text-emerald-600">1.250.000 đ</span>
+                        <span class="text-sm text-gray-400 line-through">1.500.000 đ</span>
+                    </div>
+                    <button onclick="openOrderModal('Nuoc Tinh Chat Linh Chi', 1250000)" class="w-full bg-emerald-600 text-white text-center py-2.5 rounded-lg font-semibold hover:bg-emerald-700 transition">
+                        <i class="fa-solid fa-cart-shopping mr-2"></i> Mua Ngay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="huong-dan" class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-2xl font-bold mb-6">Quy Trình Đặt Hàng Đơn Giản</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-4">
+                    <div class="w-12 h-12 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto text-xl font-bold mb-3">1</div>
+                    <p class="font-semibold">Bấm "Mua Ngay"</p>
+                    <p class="text-sm text-gray-500">Chọn mặt hàng dinh dưỡng bạn cần mua.</p>
+                </div>
+                <div class="p-4">
+                    <div class="w-12 h-12 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto text-xl font-bold mb-3">2</div>
+                    <p class="font-semibold">Điền Thông Tin</p>
+                    <p class="text-sm text-gray-500">Điền Form đặt hàng để cửa hàng giao tận nơi.</p>
+                </div>
+                <div class="p-4">
+                    <div class="w-12 h-12 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto text-xl font-bold mb-3">3</div>
+                    <p class="font-semibold">Quét Mã QR Chuyển Khoản</p>
+                    <p class="text-sm text-gray-500">Quét mã QR kế bên để thanh toán nhanh chóng.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center border-t border-gray-800">
+        <p class="text-sm">&copy; 2026 NutriPremium. Bảo lưu mọi quyền.</p>
+    </footer>
+
+    <div id="orderModal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl flex flex-col md:flex-row relative">
+            
+            <button onclick="closeOrderModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl z-10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="w-full md:w-1/2 p-6 border-b md:border-b-0 md:border-r border-gray-200">
+                <div class="mb-4">
+                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-wide">Bước 1: Thông tin đơn hàng</span>
+                    <h3 id="modalProductName" class="text-xl font-bold text-gray-900 mt-1">Tên Sản Phẩm</h3>
+                    <p class="text-base text-gray-600 mt-1">Tổng thanh toán: <span id="modalProductPrice" class="font-bold text-emerald-600">0 đ</span></p>
+                </div>
+                
+                <div class="w-full h-[440px] bg-gray-50 rounded-lg overflow-hidden border border-gray-200">
+                    <iframe id="googleFormIframe" 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSfH3kzCf7w8r4OCaeE04XGAChhpE0gFiKnaY64aIpjvVn6zXw/viewform?embedded=true" 
+                        class="w-full h-full border-0">
+                        Đang tải biểu mẫu...
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 p-6 bg-gray-50 flex flex-col items-center justify-center text-center">
+                <div class="mb-4">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">Bước 2: Quét mã QR chuyển khoản</span>
+                    <h3 class="text-lg font-bold text-gray-900 mt-1">Thanh Tự Động Qua BIDV</h3>
+                    <p class="text-xs text-gray-500 mt-1">Hệ thống tự động đồng bộ hóa thông tin đơn hàng.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl shadow-md border border-gray-100 mb-4 max-w-[240px]">
+                    <img id="sepayQrImage" src="" alt="Mã QR Thanh Toán BIDV" class="w-full h-auto">
+                </div>
+
+                <div class="w-full max-w-xs bg-white p-3 rounded-lg text-left text-xs space-y-1.5 border border-gray-200 shadow-sm">
+                    <p class="text-gray-500">Ngân hàng: <span id="txtBank" class="font-semibold text-gray-800">---</span></p>
+                    <p class="text-gray-500">Số tài khoản: <span id="txtSTK" class="font-semibold text-gray-800">---</span></p>
+                    <p class="text-gray-500">Chủ tài khoản: <span id="txtHolder" class="font-semibold text-gray-800">---</span></p>
+                    <p class="text-gray-500">Số tiền: <span id="txtAmount" class="font-semibold text-emerald-600">---</span></p>
+                    <p class="text-gray-500">Nội dung CK: <span id="txtDes" class="font-semibold text-amber-600">---</span></p>
+                </div>
+                
+                <p class="text-xs text-gray-400 mt-4 italic"><i class="fa-solid fa-shield-halved"></i> Đơn hàng sẽ được xác nhận ngay sau khi hệ thống nhận được giao dịch.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function openOrderModal(productName, priceNumber) {
+            // 1. Cập nhật tên và giá định dạng tiền tệ Việt Nam lên giao diện
+            document.getElementById('modalProductName').innerText = productName;
+            document.getElementById('modalProductPrice').innerText = priceNumber.toLocaleString('vi-VN') + " đ";
+
+            // 2. Tạo nội dung chuyển khoản tự động không dấu viết liền
+            let nộiDungChuyenKhoan = "DH " + productName.replace(/\s+/g, '');
+            
+            // 3. Khởi tạo link API chuẩn định dạng yêu cầu truyền đúng số tiền và nội dung đơn hàng tương ứng
+            let sepayQrUrl = `https://qr.sepay.vn/img?acc=${MAC_DINH_STK}&bank=${MAC_DINH_NGAN_HANG}&amount=${priceNumber}&des=${nộiDungChuyenKhoan}&template=compact&showinfo=true&holder=${encodeURIComponent(MAC_DINH_TEN_CHU_TK)}`;
+            
+            // 4. Đẩy thông tin text và ảnh QR động vào trong Modal hộp thoại
+            document.getElementById('sepayQrImage').src = sepayQrUrl;
+            document.getElementById('txtBank').innerText = MAC_DINH_NGAN_HANG;
+            document.getElementById('txtSTK').innerText = MAC_DINH_STK;
+            document.getElementById('txtHolder').innerText = MAC_DINH_TEN_CHU_TK;
+            document.getElementById('txtAmount').innerText = priceNumber.toLocaleString('vi-VN') + " đ";
+            document.getElementById('txtDes').innerText = nộiDungChuyenKhoan;
+
+            // 5. Hiển thị bật Modal ra màn hình
+            const modal = document.getElementById('orderModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeOrderModal() {
+            const modal = document.getElementById('orderModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = ''; 
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('orderModal');
+            if (event.target == modal) {
+                closeOrderModal();
+            }
+        }
+    </script>
+</body>
+</html>
